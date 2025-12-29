@@ -226,11 +226,13 @@ h1 {
   background: var(--bg2);
   border: 1px solid var(--border);
   border-radius: 16px;
-  width: auto;
-  height: auto;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
   padding: 24px;
   position: relative;
   animation: fadeInUp 0.3s ease;
+  overflow-y: auto;
 }
 
 .modal-close {
