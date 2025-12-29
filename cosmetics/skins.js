@@ -1,3 +1,4 @@
+const API_KEY = "71eaa817-0f3a-42a6-b840-d75b078a3693";
 const API_BASE = "https://fortnite-api.com/v2";
 
 const container = document.getElementById("skins-container");
@@ -32,17 +33,20 @@ let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
 function isValidItem(item) {
   const hasName = item?.name && item.name.trim() !== "" && item.name.toLowerCase() !== "tbd";
+
   const hasDescription =
     item?.description &&
     item.description.trim() !== "" &&
     item.description.toLowerCase() !== "null" &&
     item.description.toLowerCase() !== "tbd";
+
   const hasImage =
     (item?.images?.icon && item.images.icon.trim() !== "") ||
     (item?.images?.smallIcon && item.images.smallIcon.trim() !== "");
 
   return hasName && hasDescription && hasImage;
 }
+
 
 function formatDate(dateStr) {
   return dateStr ? dateStr.split("T")[0] : "N/A";
@@ -239,6 +243,8 @@ function observeLastRow() {
   rowObserver = new IntersectionObserver(
     async ([entry]) => {
       if (!entry.isIntersecting) return;
+
+      // Se houver filtro ativo, só renderiza o restante do filteredBuffer
       if ((!filteredBuffer || filteredBuffer.length < 20) && !apiFinished) {
         await fetchFromApi();
         if (!filteredBuffer) renderNextRows();
@@ -271,7 +277,6 @@ function getAllAssets(item) {
 
   return urls;
 }
-
 
 (async function init() {
   await fetchFromApi();
