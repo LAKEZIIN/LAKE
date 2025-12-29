@@ -369,7 +369,7 @@ h1 {
   border-radius: 14px;
   padding: 25px;
   width: 90%;
-  max-width: auto;
-  max-height: auto;
+  max-width: 600px;
+  max-height: 90vh;
   overflow-y: auto;
 }
