@@ -215,6 +215,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 90vh;
   z-index: 200;
 }
 
