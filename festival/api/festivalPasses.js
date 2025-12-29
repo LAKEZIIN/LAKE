@@ -17,25 +17,19 @@ export async function loadFestivalPasses() {
       </div>
     `;
 
-    // Abrir modal ao clicar
     card.addEventListener("click", () => openPassModal(pass));
 
     container.appendChild(card);
   });
 }
 
-// -----------------------------------------
-// Função do modal
-// -----------------------------------------
 function openPassModal(pass) {
   const modal = document.createElement("div");
   modal.className = "modal";
 
-  // Cria listas de itens gratuitos e premium
   const freeItems = pass.rewards.filter(r => r.type === "free");
   const premiumItems = pass.rewards.filter(r => r.type === "premium");
 
-  // Função para gerar HTML dos itens
   const renderItems = items => items.map(item => `
     <div class="item-card">
       <img src="${item.image}" alt="${item.name}">
@@ -60,7 +54,6 @@ function openPassModal(pass) {
     </div>
   `;
 
-  // Fechar modal
   modal.querySelector(".modal-close").onclick = () => modal.remove();
   modal.onclick = e => e.target === modal && modal.remove();
 

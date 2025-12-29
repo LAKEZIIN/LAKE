@@ -133,10 +133,12 @@ h1 {
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.card:hover, .song-card:hover, .pass-card:hover {
+.card:hover,
+.song-card:hover,
+.pass-card:hover {
   transform: translateY(-3px);
   border-color: var(--accent);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .card img {
@@ -160,17 +162,23 @@ h1 {
   background: var(--bg);
 }
 
-.card-content, .pass-info, .song-info {
+.card-content,
+.pass-info,
+.song-info {
   padding: 12px;
 }
 
-.card h3, .pass-info h3, .song-info h3 {
+.card h3,
+.pass-info h3,
+.song-info h3 {
   font-size: 14px;
   margin-bottom: 4px;
   color: var(--text);
 }
 
-.card p, .pass-info p, .song-info p {
+.card p,
+.pass-info p,
+.song-info p {
   font-size: 12px;
   color: var(--muted);
 }
@@ -180,8 +188,15 @@ h1 {
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .song-info {
@@ -196,14 +211,16 @@ h1 {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0, 0, 0, 0.65);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 200;
 }
 
-.modal.hidden { display: none; }
+.modal.hidden {
+  display: none;
+}
 
 .modal-content {
   background: var(--bg2);
@@ -226,12 +243,22 @@ h1 {
   cursor: pointer;
 }
 
-.modal-close:hover { color: var(--text); }
+.modal-close:hover {
+  color: var(--text);
+}
 
 @media (max-width: 768px) {
-  .grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
-  .section h2 { font-size: 20px; }
-  .modal-content { padding: 18px; }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .section h2 {
+    font-size: 20px;
+  }
+
+  .modal-content {
+    padding: 18px;
+  }
 }
 
 #song-search {
