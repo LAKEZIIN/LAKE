@@ -244,7 +244,6 @@ function observeLastRow() {
     async ([entry]) => {
       if (!entry.isIntersecting) return;
 
-      // Se houver filtro ativo, só renderiza o restante do filteredBuffer
       if ((!filteredBuffer || filteredBuffer.length < 20) && !apiFinished) {
         await fetchFromApi();
         if (!filteredBuffer) renderNextRows();
