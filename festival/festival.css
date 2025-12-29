@@ -372,3 +372,8 @@ h1 {
   max-height: 90vh;
   overflow-y: auto;
 }
+
+.festival-logo {
+  width: 100px;
+  height: auto;
+}

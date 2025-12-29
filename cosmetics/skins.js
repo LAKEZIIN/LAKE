@@ -1,4 +1,3 @@
-const API_KEY = "71eaa817-0f3a-42a6-b840-d75b078a3693";
 const API_BASE = "https://fortnite-api.com/v2";
 
 const container = document.getElementById("skins-container");
@@ -81,10 +80,9 @@ async function fetchFromApi() {
 
   try {
     const res = await fetch(
-      `${API_BASE}/cosmetics/br?page=${page}&limit=${apiLimit}&language=${language}`,
-      { headers: { Authorization: API_KEY } }
+      `${API_BASE}/cosmetics/br?page=${page}&limit=${apiLimit}&language=${language}`
     );
-    const json = await res.json();
+    json = await res.json();
     const items = (json.data || []).filter(isValidItem);
 
     if (items.length < apiLimit) apiFinished = true;
