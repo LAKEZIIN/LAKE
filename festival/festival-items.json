@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Hope",
+    "images": {
+      "icon": "https://link-da-imagem1.png"
+    },
+    "rarity": {
+      "value": "epic",
+      "displayValue": "Épico"
+    }
+  },
+  {
+    "name": "Skin Lendária 2",
+    "images": {
+      "icon": "https://link-da-imagem2.png"
+    },
+    "rarity": {
+      "value": "legendary",
+      "displayValue": "Lendário"
+    }
+  },
+  {
+    "name": "Skin Rara 3",
+    "images": {
+      "icon": "https://link-da-imagem3.png"
+    },
+    "rarity": {
+      "value": "rare",
+      "displayValue": "Rara"
+    }
+  }
+]

@@ -1,0 +1,6 @@
+[
+  { "id": "vocals", "name": "Vocal 🎤" },
+  { "id": "guitar", "name": "Guitarra 🎸" },
+  { "id": "bass", "name": "Baixo 🎶" },
+  { "id": "drums", "name": "Bateria 🥁" }
+]
