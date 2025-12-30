@@ -36,7 +36,15 @@ body {
 nav {
   background: var(--bg2);
   border-bottom: 1px solid var(--border);
-  padding: 16px 20px;
+  padding: 4px 8px;
+}
+
+.nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
 }
 
 nav a {
@@ -382,4 +390,9 @@ h2 {
   max-width: 90%;
   max-height: 90vh;
   overflow-y: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
 }
