@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortnite Artist Chart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" aria-current="page">Charts</a>
+  </nav>
+
+  <button id="downloadChart" class="downloadChart" aria-label="Baixar PNG">📥</button>
+  <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+
+  <main class="page">
+    <h1>FORTNITE HOT 100</h1>
+
+    <div class="chart-container">
+      <table class="chart-table">
+        <caption>Ranking of the most used artists in Fortnite of all time. Chart data by X/@Lakeziin</caption>
+        <thead>
+          <tr>
+            <th scope="col">Position</th>
+            <th scope="col">Change</th>
+            <th scope="col">Artist</th>
+            <th scope="col">Uses</th>
+            <th scope="col">Release Date</th>
+          </tr>
+        </thead>
+        <tbody id="chart-body">
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <script>
+  const button = document.getElementById('downloadChart');
+  const chart = document.querySelector('.chart-container');
+</script>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>
